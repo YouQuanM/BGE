@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="BGEbianpai.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <p class="navbar-text navbar-right">小组轮换表</p>
+        </div>
+    </div>
+</nav>
+<div class="main container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <form>
+                <div class="form-group">
+                    <label>输入队伍名称</label>
+                    <input type="text" class="form-control" placeholder="队伍" id="team-name">
+                    <button type="button" class="btn btn-default" onclick="Addteam()">添加队伍</button>
+                </div>
+            </form>
+            <div id="teamName">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <button type="button" class="btn btn-default" onclick="BGE()">排列</button>
+            <div id="teamBuild">
+                <h4></h4>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
