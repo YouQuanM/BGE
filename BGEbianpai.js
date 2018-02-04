@@ -6,13 +6,12 @@ function Addteam() {
     if(index < 0){
         arr.push(name);
         var div = document.getElementById("teamName");
-        div.innerHTML += name + "" +"<hr/>";
+        $("#teamName").append(name+"<hr/>");
     }else {
         alert("已经输入过该队伍了！")
     }
 
 }
-var div_l = document.getElementById("teamBuild");
 function BGE() {
     if (arr.length % 2 !== 0){
         arr.push("轮空");
@@ -23,7 +22,7 @@ function BGE() {
             for(var j = 0; j < arr.length/2; j++){
                 var text_out = (arr[j]+"-"+arr[arr.length-j-1]);
                 console.log(arr[j]+"-"+arr[arr.length-j-1]);
-                $("h4").append(text_out + "<br>");
+                $("#teamBuild").append(text_out + "<br>");
             }
             [arr[0],arr[arr.length-1]]=[arr[arr.length-1],arr[0]];
             if (i % 2 !== 0){
@@ -37,10 +36,15 @@ function BGE() {
                     str_l = arr.splice(arr.length-2,1);
                 }
             }
-            $("h4").append("<br>");
+            $("#teamBuild").append("<br>");
             console.log("--");
         }
     }else {
         alert("需要四只队伍以上");
     }
+}
+function Clear() {
+    arr.length = 0;
+    $("#teamBuild").empty();
+    $("#teamName").empty();
 }

@@ -8,3 +8,6 @@ input#team-name{
 button#btn-pailie{
     float: right;
 }
+button#btn-clear{
+    float: right;
+}
