@@ -24,13 +24,16 @@
                     <label>输入队伍名称</label>
                     <input type="text" class="form-control" placeholder="队伍" id="team-name">
                     <button type="button" class="btn btn-default" onclick="Addteam()">添加队伍</button>
+                    <button id="btn-pailie" type="button" class="btn btn-default" onclick="BGE()">排列</button>
                 </div>
             </form>
-            <div id="teamName">
+            <div class="team">
+                <h3>全部队伍：</h3>
+                <div id="teamName">
+                </div>
             </div>
         </div>
         <div class="col-md-8">
-            <button type="button" class="btn btn-default" onclick="BGE()">排列</button>
             <div id="teamBuild">
                 <h4></h4>
             </div>
