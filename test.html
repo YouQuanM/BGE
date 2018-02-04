@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <label>输入队伍名称</label>
                     <input type="text" class="form-control" placeholder="队伍" id="team-name">
-                    <button type="button" class="btn btn-default" onclick="Addteam()">添加队伍</button>
+                    <button id="Add" type="button" class="btn btn-default" onclick="Addteam()">添加队伍</button>
                     <button id="btn-pailie" type="button" class="btn btn-default" onclick="BGE()">排列</button>
                 </div>
             </form>
@@ -36,7 +36,13 @@
         <div class="col-md-8">
             <button id="btn-clear" type="button" class="btn btn-default" onclick="Clear()">清空</button>
             <div>
-                <h4 id="teamBuild"></h4>
+                <table class="table">
+                    <thead><h3>分组:</h3></thead>
+                    <tbody>
+                        <tr id="teamBuild-head"></tr>
+                        <tr id="teamBuild-body"></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

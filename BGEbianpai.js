@@ -2,15 +2,19 @@
 var arr = [];
 function Addteam() {
     var name = $(" #team-name ").val();
-    var index = $.inArray(name,arr);
-    if(index < 0){
-        arr.push(name);
-        var div = document.getElementById("teamName");
-        $("#teamName").append(name+"<hr/>");
-    }else {
-        alert("已经输入过该队伍了！")
+    if (name === ''){
+        alert("这个队伍没有名字？")
+    }else{
+        var index = $.inArray(name,arr);
+        if(index < 0){
+            arr.push(name);
+            var div = document.getElementById("teamName");
+            $("#teamName").append(name+"<hr/>");
+        }else {
+            alert("已经输入过该队伍了！")
+        }
     }
-
+    $("input[id='team-name']").val("").focus();
 }
 function BGE() {
     if (arr.length % 2 !== 0){
@@ -19,11 +23,14 @@ function BGE() {
     if(arr.length > 4){
         var step = (arr.length+arr.length%2-4)/2;
         for(let i = 1; i < arr.length; i++){
+            $("#teamBuild-head").append("<th>"+"第"+i+"轮"+"</th>");
+            $("#teamBuild-body").append("<td id="+i+">");
             for(var j = 0; j < arr.length/2; j++){
                 var text_out = (arr[j]+"-"+arr[arr.length-j-1]);
                 console.log(arr[j]+"-"+arr[arr.length-j-1]);
-                $("#teamBuild").append(text_out + "<br>");
+                $("td[id="+i+"]").append(text_out + "<br>");
             }
+            $("#teamBuild-body").append("</td>");
             [arr[0],arr[arr.length-1]]=[arr[arr.length-1],arr[0]];
             if (i % 2 !== 0){
                 for (let n = 0; n < step+1; n++){
@@ -36,7 +43,6 @@ function BGE() {
                     str_l = arr.splice(arr.length-2,1);
                 }
             }
-            $("#teamBuild").append("<br>");
             console.log("--");
         }
     }else {
@@ -45,6 +51,12 @@ function BGE() {
 }
 function Clear() {
     arr.length = 0;
-    $("#teamBuild").empty();
+    $("#teamBuild-body").empty();
+    $("#teamBuild-head").empty();
     $("#teamName").empty();
 }
+$("button[id=Add]").on("keydown",function(e){
+    if(e.key==="Enter"){
+        $("#btnSubmit").trigger("click");
+    }
+})
