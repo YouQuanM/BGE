@@ -5,6 +5,9 @@ div.main{
 input#team-name{
     margin-bottom: 3%;
 }
+button{
+    margin: 1%;
+}
 button#btn-pailie{
     float: right;
 }

@@ -24,11 +24,11 @@
                     <label>输入队伍名称（队伍数>4）</label>
                     <input type="text" class="form-control" placeholder="队伍" id="team-name">
                     <input id="hiddenText" type="text" style="display:none"><!--防止回车之后刷新页面-->
-                    <button id="Add" type="button" class="btn btn-default" onclick="Addteam()">添加队伍</button>
-                    <button id="btn-pailie" type="button" class="btn btn-default" onclick="BGE()">排列</button>
-                    <button id="btn-save" type="button" class="btn btn-default" onclick="Save_team()">保存队伍</button>
-                    <button id="btn-read" type="button" class="btn btn-default" onclick="Read_team()">读取队伍</button>
-                    <button id="btn-clean" type="button" class="btn btn-default" onclick="Clean_Storage()">清除队伍缓存</button>
+                    <button id="Add" type="button" class="btn btn-default btn-info" onclick="Addteam()">添加队伍</button>
+                    <button id="btn-pailie" type="button" class="btn btn-default btn-success" onclick="BGE()">排列</button>
+                    <button id="btn-save" type="button" class="btn btn-default btn-primary" onclick="Save_team()">保存队伍</button>
+                    <button id="btn-read" type="button" class="btn btn-default btn-primary" onclick="Read_team()">读取队伍</button>
+                    <button id="btn-clean" type="button" class="btn btn-default btn-danger" onclick="Clean_Storage()">清除队伍缓存</button>
                 </div>
             </form>
             <div class="team">
@@ -38,8 +38,8 @@
             </div>
         </div>
         <div class="col-md-8">
-            <button id="btn-clear-team" type="button" class="btn btn-default" onclick="Clear_team()">清空队伍</button>
-            <button id="btn-clear-table" type="button" class="btn btn-default" onclick="Clear_table()">清空表格</button>
+            <button id="btn-clear-team" type="button" class="btn btn-default btn-danger" onclick="Clear_team()">清空队伍</button>
+            <button id="btn-clear-table" type="button" class="btn btn-default btn-danger" onclick="Clear_table()">清空表格</button>
             <div>
                 <table class="table table-hover">
                     <thead>分组:</thead>

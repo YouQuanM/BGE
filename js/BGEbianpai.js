@@ -9,6 +9,7 @@ function Addteam() {
         var index = $.inArray(name,arr);
         if(index < 0){
             arr.push(name);
+            var div = document.getElementById("teamName");
             $("#teamName").append(name+"<hr/>");
         }else {
             alert("已经输入过该队伍了！")
@@ -82,7 +83,7 @@ function Clear_team() {
 function Clear_table() {
     $("tbody").empty();
 }
-//本地可以缓存一组队伍
+
 function Save_team() {
     localStorage.setItem("myarr",JSON.stringify(arr));
 }
