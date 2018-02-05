@@ -27,6 +27,9 @@ function BGE() {
         var step = (arr.length+arr.length%2-4)/2;
         for(let i = 1; i < arr.length; i++){
             //输出共多少轮次的比赛为<th>
+            for(let h = 0; h < 6; h++){
+
+            }
             $("#teamBuild-head").append("<th>"+"第"+i+"轮"+"</th>");
             //输出每一轮次的比赛为<td>，并为每个td加id
             $("#teamBuild-body").append("<td id="+i+">");
