@@ -19,3 +19,6 @@ td:nth-of-type(odd){
 th:nth-of-type(odd){
     background-color: #f5f5f5;
 }
+p#allteam{
+    display: inline;
+}

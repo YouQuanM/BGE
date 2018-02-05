@@ -15,6 +15,7 @@ function Addteam() {
             alert("已经输入过该队伍了！")
         }
     }
+    $("#allteam").html(arr.length)
     //输入完成后清空input输入框，并放置焦点
     $("input[id='team-name']").val("").focus();
 }
