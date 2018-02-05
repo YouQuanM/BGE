@@ -76,8 +76,10 @@ function BGE() {
     }
 }
 //清空所有数据
-function Clear() {
+function Clear_team() {
     arr.length = 0;
-    $("tbody").empty();
     $("#teamName").empty();
+}
+function Clear_table() {
+    $("tbody").empty();
 }

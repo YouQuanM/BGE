@@ -8,7 +8,10 @@ input#team-name{
 button#btn-pailie{
     float: right;
 }
-button#btn-clear{
+button#btn-clear-table{
+    float: right;
+}
+button#btn-clear-team{
     float: right;
 }
 td:nth-of-type(odd){
