@@ -49,6 +49,10 @@ function BGE() {
                     //输出每一组的对战情况
                     var text_out = (arr[j]+"-"+arr[arr.length-j-1]);
                     $("td[id="+1000+i+"]").append(text_out + "<br>");
+                    //输出数组
+                    var arr_out = [];
+                    arr_out.push([arr[j],arr[arr.length-j-1]]);
+                    console.log(arr_out);
                 }
                 $("tr[id="+i+"]").append("</td>");
             $("tbody").append("</tr>")
@@ -57,6 +61,7 @@ function BGE() {
             arr[0] = arr[arr.length-1];
             arr[arr.length-1] = temp;
 
+            // es6写法。。。好像写错了，没起作用
             // [arr[0],arr[arr.length-1]]=[arr[arr.length-1],arr[0]];
             if (i % 2 !== 0){
                 for (let n = 0; n < step+1; n++){
