@@ -1,5 +1,5 @@
 # BGE
-贝格尔编排
+贝格尔编排 http://www.liangzhicompany.com/
 
 用了一些jquery，bootstrap
 
