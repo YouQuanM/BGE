@@ -1,6 +1,4 @@
 # BGE
-发现一些问题，更改中。。。。(已解决)
-
 贝格尔编排 详情见 -> http://www.liangzhicompany.com/
 
 用了一些jquery，bootstrap
