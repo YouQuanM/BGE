@@ -26,21 +26,36 @@ function BGE() {
     if(arr.length > 4){
         var step = (arr.length+arr.length%2-4)/2;
         for(let i = 1; i < arr.length; i++){
-            //输出共多少轮次的比赛为<th>
-            for(let h = 0; h < 6; h++){
 
-            }
-            $("#teamBuild-head").append("<th>"+"第"+i+"轮"+"</th>");
-            //输出每一轮次的比赛为<td>，并为每个td加id
-            $("#teamBuild-body").append("<td id="+i+">");
-            for(var j = 0; j < arr.length/2; j++){
-                //输出每一组的对战情况
-                var text_out = (arr[j]+"-"+arr[arr.length-j-1]);
-                //在consloe里也输出一个
-                console.log(arr[j]+"-"+arr[arr.length-j-1]);
-                $("td[id="+i+"]").append(text_out + "<br>");
-            }
-            $("#teamBuild-body").append("</td>");
+            // //输出共多少轮次的比赛为<th>
+            // $("tr.teamBuild-head").append("<th>"+"第"+i+"轮"+"</th>");
+            // //输出每一轮次的比赛为<td>，并为每个td加id
+            // $("tr.teamBuild-body").append("<td id="+i+">");
+            // for(var j = 0; j < arr.length/2; j++){
+            //     //输出每一组的对战情况
+            //     var text_out = (arr[j]+"-"+arr[arr.length-j-1]);
+            //     //在consloe里也输出一个
+            //     console.log(arr[j]+"-"+arr[arr.length-j-1]);
+            //     $("td[id="+i+"]").append(text_out + "<br>");
+            // }
+            // $("#teamBuild-body").append("</td>");
+
+            //更新：把表格输出调整为竖排输出，解决了队伍数太多导致的横向空间不足。
+            $("tbody").append("<tr id="+i+">");
+                $("tr[id="+i+"]").append("<td>"+"第"+i+"轮"+"</td>>");
+                $("tr[id="+i+"]").append("<td id="+1000+i+">");
+                for(var j = 0; j < arr.length/2; j++){
+                    //输出每一组的对战情况
+                    var text_out = (arr[j]+"-"+arr[arr.length-j-1]);
+                    //在consloe里也输出一个
+                    console.log(arr[j]+"-"+arr[arr.length-j-1]);
+                    $("td[id="+1000+i+"]").append(text_out + "<br>");
+                }
+                $("tr[id="+i+"]").append("</td>");
+            $("tbody").append("</tr>")
+
+
+
             [arr[0],arr[arr.length-1]]=[arr[arr.length-1],arr[0]];
             if (i % 2 !== 0){
                 for (let n = 0; n < step+1; n++){
